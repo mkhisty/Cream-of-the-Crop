@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/ccom.css') }}">
+        <script src="{{ url_for('static', filename='js/recipes.js') }}"></script>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+        <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+
+    </head>
+    <body>
+        <div class="parent">
+            <div class="navbar" id="myNavbar">
+                <a href="http://127.0.0.1:5000/" id="im"><img src="http://127.0.0.1:5000/static/assets/logo.png" alt="Logo"></a> <!-- Add your logo here -->
+                <a href="/home?uname=mkhisty" class="active l">Home</a>
+                <a href="/ccom?uname=mkhisty" class="l">Events</a>
+                <a href="/recipes?uname=mkhisty" class="l">Recipes</a>
+                <a href="/rewards?uname=mkhisty" class="l">Rewards</a>
+            
+                <div class="Search">
+                <form method="POST">  <input type="text" name="val" placeholder="Browse.." class="s2"> <input type="submit" value="Search" class="srchbutton">
+            
+                </form></div> <a class="prof" href="/login"><ion-icon name="person-outline" class="i"></ion-icon></a>
+            
+            
+            </div>  
+            <div class="calendar" id="calendar">
+                <h1>Recipes</h1>
+
+
+
+            </div>
+            <div class="next" id="next">
+
+            </div>
+        </div>
+        <script>render_events({{data|safe}})</script>
+    </body>
+</html>

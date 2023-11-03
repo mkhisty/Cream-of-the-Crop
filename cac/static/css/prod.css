@@ -1,0 +1,201 @@
+
+body {font-family: Ubuntu, sans-serif; margin:0;width: 100%;height: 100%;}
+html{height: 100%;width: 100%;}
+.parent {
+    display: grid;
+    grid-template-columns: 45% 35% 20%;
+    grid-template-rows: 5% 90%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0.75vw;
+    min-height: 100%;
+    width: 100%;
+    }
+.navbar {
+    background-color: #ffffff;
+    overflow: hidden;
+    border-bottom: 3px  black solid;
+    grid-area: 1 / 1 / 2 / 4;
+}
+.fa-star{
+  padding: 5px
+}
+.checked{
+color: rgb(255, 255, 86);
+background-color: #000000;
+}
+#im{
+  padding: 0%;
+}
+.i{
+  margin-left: 40%;
+  margin-top: 16%;
+}
+.l {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  height: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1.5%;
+  text-decoration: none;
+}
+
+.navbar img {
+  height: 100%;
+  float: left; /* Adjust the height of your logo */
+}
+
+.l:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.l.active {
+  font-family: Ubuntu;
+  font-weight: bold;
+    background-color: #000000;
+    color: #78f4b5;
+    text-decoration: underline;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+
+.prof{
+  margin: 0.5%;
+  float: right;
+  width: 5%;
+  height:80%;
+  background: linear-gradient(90deg, rgba(117,227,194,1) 0%, rgba(135,243,181,1) 100%);
+  border-radius:10%;
+  border: 0px black solid
+  
+  }
+
+.filters form{
+    padding-left: 10%;
+display: flex;
+flex-direction: column;
+}
+.s2{
+
+    height: 70%;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    border:2px black solid;
+    color: #000000;
+    text-decoration: underline bold;
+    font-family: Ubuntu;
+      font-weight: bold;
+    font-size: 100%;
+    padding-left: 10px;
+  
+  }
+.Search{          
+    float: left;
+    display: block;
+    padding: 1%;
+    width: 30%;
+    height: 70%;
+    margin-bottom: 2%;
+
+  }
+  .srchbutton{
+    background-image:url("http://127.0.0.1:5000/static/assets/search.png");
+    padding-left: 1%;
+    text-align: left;
+    background-position: 90% 80%;
+    background-repeat: no-repeat;
+    background-color: #89f4b7;
+    background-size: 20% 70%;
+  border-radius: 5%;
+  border: #000000 0px solid;
+  border-radius: 5%;
+  height: 80%;
+  width: 20%;
+  padding-right: 5%;
+  font-family: Ubuntu;
+  margin-bottom: 0.5%;
+  }
+  .prof{
+    margin: 0.5%;
+    float: right;
+    width: 5%;
+    height:80%;
+    background: linear-gradient(90deg, rgba(117,227,194,1) 0%, rgba(135,243,181,1) 100%);
+    border-radius:10%;
+    border: 0px black solid
+    
+    }
+.image{
+    grid-area: 2,1,3,2;
+    width: 100%;
+    overflow: hidden;
+    padding: 5%;
+
+}
+.image img{
+    width: 90%;
+    max-height: 90%;
+    border: 2px black solid;
+    border-radius: 1vw;
+}
+.info{
+    padding: 5%;
+}
+.label{
+  font-size: 3vw;
+}
+.price{
+  font-size: 3vw;
+}
+.comment{
+  padding: 1%;
+  border: 1px solid black;
+  border-radius: 1vw;
+}
+.purchase{
+  grid-area: 2,3,3,4;
+  margin: 2%;
+  margin-top: 50%;
+  height: 30%;
+  border: 1px black solid;
+  border-radius: 1vw;
+}
+.cbutton{
+  width: 100%;
+  padding: 5%;
+  border: 1px black solid;
+  background-color: #000000;
+  color: #78f4b5;
+  border-radius: 0.2vw;
+  font-family: Ubuntu;
+  font-size: 100%;
+}
+.cbutton:hover{
+  width: 100%;
+  padding: 5%;
+  border: 1px black solid;
+  background: linear-gradient(90deg, rgba(117,227,194,1) 0%, rgba(135,243,181,1) 100%);
+  color: #000000;
+  border-radius: 0.2vw;
+  font-family: Ubuntu;
+  font-size: 100%;
+}
+
+.csect{
+  padding: 10%;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.csect p{
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.2vw;
+}

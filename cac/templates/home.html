@@ -1,0 +1,88 @@
+<!--<a href="https://www.freepik.com/icons/search">Icon by Catalin Fertu</a>-->
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+
+</head>
+<body>
+<div class = "parent">
+  <div class="navbar" id="myNavbar">
+    <a href="http://127.0.0.1:5000/" id="im"><img src="http://127.0.0.1:5000/static/assets/logo.png" alt="Logo"></a> <!-- Add your logo here -->
+    <a href="/home?uname=mkhisty" class="active l">Home</a>
+    <a href="/ccom?uname=mkhisty" class="l">Events</a>
+    <a href="/recipes?uname=mkhisty" class="l">Recipes</a>
+    <a href="/rewards?uname=mkhisty" class="l">Rewards</a>
+
+    <div class="Search">
+    <form method="POST">  <input type="text" name="val" placeholder="Browse.." class="s2"> <input type="submit" value="Search" class="srchbutton">
+
+    </form></div> <a class="prof" href="/login"><ion-icon name="person-outline" class="i"></ion-icon></a>
+
+
+</div>  
+<div class="slideshow-container">
+
+<div class="mySlides fade"></div>
+
+<div class="mySlides fade"></div>
+
+<div class="mySlides fade"></div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<div class="dashboard">
+<div id = events class="events"><a href="/ccom?uname=mkhisty"><h1 style="  text-decoration: underline; color: black;  ">Events</h1></a><p class = e>Pumpkinfest Livonia MI 31 October 6PM<ion-icon name="arrow-forward-outline"></ion-icon></p><p class = e>Apple Picking Canton MI 3 November 10AM<ion-icon name="arrow-forward-outline"></ion-icon></p></div>
+<div id = recipes class="events"><a href="/recipes?uname=mkhisty"><h1 style="  text-decoration: underline;color: black;  ">Recipes</h1></a> <p class = e>Continue Creamy Hazlenut Pumpkin Pie<ion-icon name="arrow-forward-outline"></ion-icon></p><p class = e>Continue Apple Fritter<ion-icon name="arrow-forward-outline"></ion-icon></p>
+</div>
+<div id = rewards class="events"><a href="/rewards?uname=mkhisty"><h1 style="  text-decoration: underline; color: black; ">Rewards</h1></a><div class="Rw">50 CCC</div></div>
+
+</div>
+<div class = r><p style = "text-align: center;background-color: black;width: 10%;margin-left: 45%;padding: 0.5%;border-radius: 5%;color: white;">Recently Viewed</p>
+<div id = "recent">
+</div></div>
+<br>
+
+
+
+<script>
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  im = ["apple","pumpkin","cherry"]
+  slides[slideIndex].style.backgroundImage = 'url("http://127.0.0.1:5000/static/assets/'+im[slideIndex]+'.jpg")';
+  console.log('url("http://127.0.0.1:5000/static/assets/'+im[slideIndex]+'.jpg)')
+}
+</script>
+</body>
+<script src="{{ url_for('static', filename='js/home.js') }}" ></script>
+<script>render_recent({{recents|safe}})</script>
+
+</html> 

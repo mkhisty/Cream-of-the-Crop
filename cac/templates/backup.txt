@@ -1,0 +1,203 @@
+<head>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+  <body>
+  <div class = "parent">
+    <div class="navbar" id="myNavbar">
+      <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo"> <!-- Add your logo here -->
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <div class="Search">
+      <form>  <input type="text" placeholder="Browse.." class="s2"> <input type="submit" value="Search" class="srchbutton">
+  
+      </form></div><button class="prof"><ion-icon name="person-outline"></ion-icon></button>
+  
+  </div>
+  <div class="filters">
+    <form>
+    <h2>Filters</h2>
+    <h3>Type of Farming</h3><br>
+    <label class="container">Conventional
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="container">Non-GMO
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="container">Organic
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+
+      </label><h3>Price</h3>  <input id = "myRange" class = slider type="range" min="1" max="100" value="50"><p id="pr"></p>
+<input type="submit" value="Apply" class="apply">
+    </form>
+  </div>  
+  <div class="results" id ="results">
+<h1 class="heading">Search Results for Banana
+
+</h1>
+<div class="row">
+<div class = listing>
+
+    <img src="{{ url_for('static', filename='assets/data/4.webp') }}">
+    <div class="info">
+    <h2 class="name">Banana</h2><p>Jerry's Farm</p><p class="cost">$69</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+    <p>Delivery: 25 hours</p>
+</div>
+
+</div>
+<div class = listing>
+
+    <img src="{{ url_for('static', filename='assets/data/4.webp') }}">
+    <div class="info">
+    <h2 class="name">Banana</h2><p>Jerry's Farm</p><p class="cost">$69</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+    <p>Delivery: 25 hours</p>
+</div>
+
+  </div>
+</div>
+<div class="row">
+    <div class = listing>
+    
+        <img src="{{ url_for('static', filename='assets/data/4.webp') }}">
+        <div class="info">
+        <h2 class="name">Banana</h2><p>Jerry's Farm</p><p class="cost">$69</p>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <p>Delivery: 25 hours</p>
+    </div>
+    
+    </div>
+    <div class = listing>
+    
+        <img src="{{ url_for('static', filename='assets/data/4.webp') }}">
+        <div class="info">
+        <h2 class="name">Banana</h2><p>Jerry's Farm</p><p class="cost">$69</p>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <p>Delivery: 25 hours</p>
+    </div>
+    
+      </div>
+    </div>
+    <div class="row">
+        <div class = listing>
+        
+            <img src="{{ url_for('static', filename='assets/data/4.webp') }}">
+            <div class="info">
+            <h2 class="name">Banana</h2><p>Jerry's Farm</p><p class="cost">$69</p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <p>Delivery: 25 hours</p>
+        </div>
+        
+        </div>
+        <div class = listing>
+        
+            <img src="{{ url_for('static', filename='assets/data/4.webp') }}">
+            <div class="info">
+            <h2 class="name">Banana</h2><p>Jerry's Farm</p><p class="cost">$69</p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <p>Delivery: 25 hours</p>
+        </div>
+        
+          </div>
+        </div><div class="row">
+            <div class = listing>
+            
+                <img src="{{ url_for('static', filename='assets/data/4.webp') }}">
+                <div class="info">
+                <h2 class="name">Banana</h2><p>Jerry's Farm</p><p class="cost">$69</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p>Delivery: 25 hours</p>
+            </div>
+            
+            </div>
+            <div class = listing>
+            
+                <img src="{{ url_for('static', filename='assets/data/4.webp') }}">
+                <div class="info">
+                <h2 class="name">Banana</h2><p>Jerry's Farm</p><p class="cost">$69</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p>Delivery: 25 hours</p>
+            </div>
+            
+              </div>
+            </div><div class="row">
+                <div class = listing>
+                
+                    <img src="{{ url_for('static', filename='assets/data/4.webp') }}">
+                    <div class="info">
+                    <h2 class="name">Banana</h2><p>Jerry's Farm</p><p class="cost">$69</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <p>Delivery: 25 hours</p>
+                </div>
+                
+                </div>
+                <div class = listing>
+                
+                    <img src="{{ url_for('static', filename='assets/data/4.webp') }}">
+                    <div class="info">
+                    <h2 class="name">Banana</h2><p>Jerry's Farm</p><p class="cost">$69</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <p>Delivery: 25 hours</p>
+                </div>
+                
+                  </div>
+                </div>
+  <script src="{{ url_for('static', filename='js/search.js') }}" defer></script>
+
+            </div>
+  
+  

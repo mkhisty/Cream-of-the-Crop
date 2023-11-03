@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+</head>
+<body>
+
+<div class="parent">
+
+    <form class = "form" method="post">
+
+              
+        <div class="container">
+            <div class="imgcontainer">
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Avatar" class="avatar">
+              </div>
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+                
+            <button type="submit">Login</button>
+
+          </div>
+  <img class = "wall" src="{{ url_for('static', filename='assets/Screenshot 2023-10-18 224209.jpg') }}">
+      </form>
+</div>
+</body>
+</html>
