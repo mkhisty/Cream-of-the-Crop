@@ -184,3 +184,95 @@ def land():
     return render_template("test.html")
 if __name__ == '__main__':
     app.run()
+
+
+
+
+"""app = Flask(__name__)
+app.secret_key = 'somesecretkeythatonlyishouldknow'
+recents=[]
+def is_authenticated(u):
+    try:
+        if session["user_id"]==u and session["auth"]=="True":
+            return True
+    except:
+        return False
+    return False
+
+
+@app.route('/home',methods=['GET','POST'])
+def home():
+    if request.method=="POST":
+        print(request.form["val"])
+        c = sqlite3.connect("fdb9.db")
+        return redirect("/search?search="+request.form["val"])
+
+    if is_authenticated(request.args.get("uname")):
+        print(recents)
+        return render_template("home.html",recents=recents)
+    else:
+        return redirect("/login")
+
+@app.route('/rewards',methods=['GET','POST'])
+def rewards():
+    if is_authenticated(request.args.get("uname")):
+        return render_template("rewards.html")
+    else:
+        return redirect("/login")
+@app.route('/recipes',methods=['GET','POST'])
+def recipes():
+    if is_authenticated(request.args.get("uname")):
+        return render_template("recipes.html", data=[["Creamy Nutmeg Pumpkin Pie","2hrs",x1,x1],["Apple Fritters","1hr",x2,x2]])
+    else:
+        return redirect("/login")
+@app.route('/search',methods=['GET','POST'])
+def search():
+    if request.method=="POST":
+        print(request.form["val"])
+        c = sqlite3.connect("fdb9.db")
+        return redirect("/search?search="+request.form["val"])
+
+    c = sqlite3.connect("fdb9.db")
+    search = get_name(request.args.get("search"),c)
+    print(search)
+    recents.append(search[0][0])
+    return render_template("search.html", results = search)
+@app.route('/prod',methods=['GET','POST'])
+def prod():
+    c = sqlite3.connect("fdb9.db")
+    search = get_id(request.args.get("p"),c)
+    print(search)
+    return render_template("prod.html",info=search[0][0])
+@app.route('/ccom',methods=['GET','POST'])
+def ccom():
+    if is_authenticated(request.args.get("uname")):
+        c = sqlite3.connect("fdb9.db")
+        print("HUHIH")
+        print(type(get_events(c)))
+        print("sadfbdjhb")
+        return render_template("ccom.html",data=get_events(c))
+    else:
+
+        return redirect("/login")
+
+@app.route('/login',methods=['GET','POST'])
+def login():
+    if request.method=="POST":
+        #try:
+        username = request.form['uname']
+        password = request.form["psw"]
+        print(password)
+        if "123"==password:
+            print("yes")
+            session['user_id'] = username
+            session["auth"] = "True"
+            return redirect("/home?uname="+username)
+        #except: 
+            return render_template("login.html")        
+
+    return render_template("login.html")
+@app.route("/",methods=["GET","POST"])
+def land():
+    return render_template("test.html")
+if __name__ == '__main__':
+    app.run()"""
