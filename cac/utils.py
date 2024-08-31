@@ -1,4 +1,4 @@
-##NOT WORKING YET
+##NOT WORKING YET, lot of old code.
 import sqlite3
 c = sqlite3.connect("fdb9.db")
 def append(d):
