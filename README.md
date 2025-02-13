@@ -21,5 +21,3 @@
 
 ![App Screenshot](https://raw.githubusercontent.com/mkhisty/Cream-of-the-Crop/main/cac/screenshots/ssearch.png)
 
-![App Screenshot](https://raw.githubusercontent.com/mkhisty/Cream-of-the-Crop/main/cac/screenshots/browse.png)
-
